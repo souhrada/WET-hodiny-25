@@ -1,1 +1,1 @@
-# WET-hodiny-25
+# Kód z hodin WET

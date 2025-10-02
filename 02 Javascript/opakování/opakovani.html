@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Opakovaní</title>
+
+        <style>
+            h1 {
+                color: rgb(254, 0, 0);
+            }
+
+            .image {
+                height: 400px;
+            }
+
+            .list {
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px 30px;
+            }
+
+            .link:hover {
+                color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="nadpis">Kreativní nadpis</h1>
+        <img class="image" src="trebesin.jpg" alt="obrázek školy" />
+
+        <ol class="list">
+            <li>něco</li>
+            <li>něco jiného</li>
+            <li>kreativita neexistuje</li>
+        </ol>
+
+        <a class="link" href="https://www.trebesin.cz">Škola</a>
+
+        <button class="tlacitko">Magic!</button>
+
+        <script>
+            const tlacitko = document.querySelector(".tlacitko")
+            const body = document.querySelector("body")
+            const nadpis = document.querySelector(".nadpis")
+
+            let pressed = false
+
+            tlacitko.addEventListener("click", zmenPozadi)
+
+            function zmenPozadi() {
+                if (pressed === false) {
+                    body.style.backgroundColor = "red"
+                    pressed = true
+                } else if (pressed === true) {
+                    body.style.backgroundColor = "white"
+                    pressed = false
+                }
+
+                nadpis.style.fontSize = "100px"
+                nadpis.style.color = "salmon"
+            }
+        </script>
+    </body>
+</html>
